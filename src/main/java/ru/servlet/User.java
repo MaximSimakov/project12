@@ -1,23 +1,39 @@
-package entities;
+package ru.servlet;
+
 
 public class User {
-    private String name;
+	private int id;
+
+    private String login;
+
     private String password;
+
+    private ROLE role;
 
     public User() {
     }
 
-    public User(String name, String password) {
-        this.name = name;
+    public User(int id, String login, String password, ROLE role) {
+        this.id = id;
+        this.login = login;
         this.password = password;
+        this.role = role;
     }
 
-    public String getName() {
-        return name;
+    public int getId() {
+        return id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public String getPassword() {
@@ -28,30 +44,15 @@ public class User {
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+    public ROLE getRole() {
+        return role;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        User user = (User) o;
-
-        if (name != null ? !name.equals(user.name) : user.name != null) return false;
-        return password != null ? password.equals(user.password) : user.password == null;
-
+    public void setRole(ROLE role) {
+        this.role = role;
     }
 
-    @Override
-    public int hashCode() {
-        int result = name != null ? name.hashCode() : 0;
-        result = 31 * result + (password != null ? password.hashCode() : 0);
-        return result;
+    public enum ROLE {
+        USER, ADMIN, UNKNOWN
     }
 }
