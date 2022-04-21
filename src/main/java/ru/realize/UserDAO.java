@@ -1,7 +1,8 @@
 package ru.realize;
-import ru.servlet.User;
 import java.util.ArrayList;
 import java.util.List;
+
+import ru.model.User;
 
 
 public class UserDAO {

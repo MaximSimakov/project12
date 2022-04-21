@@ -1,4 +1,4 @@
-package ru.servlet;
+package ru.model;
 
 
 public class User {
