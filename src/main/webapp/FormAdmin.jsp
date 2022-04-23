@@ -107,7 +107,7 @@
 <input type="text" name="stoimDa" id="stoimDa" value="">
 
 <br><br><input type="submit" name="sign1" value="Вывести список подгруппы ">
-<br><br><input type="submit" name="sign" value="Рассчитать ">
+<br><br><input type="submit" name="sign2" value="Рассчитать ">
 <br><br><label for="summ">Цена:</label>
 <label for="summ1"></label>
 <label for="ryb">руб.</label>
