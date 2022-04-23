@@ -56,9 +56,12 @@ private double depth=0.5;
 	double getPriceByType(FundamentTypes type) {
 		int price=-1;
 		switch (type){
-		case BYRONABIV -> price = 5000; 
-		case LENTOCHN -> price= 6000;
-		case PLITN -> price= 5700;
+		case BYRONABIV : price = 5000;
+		break;
+		case LENTOCHN : price= 6000;
+		break;
+		case PLITN : price= 5700;
+		break;
 		}
 		return price;
 	}

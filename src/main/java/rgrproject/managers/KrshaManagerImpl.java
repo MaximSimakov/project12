@@ -34,8 +34,10 @@ public class KrshaManagerImpl extends KrshaManager {
 	double getPriceByType(KrshaTypes type) {
 		int price=-1;
 		switch (type){
-		case METALLO -> price = 4000; 
-		case MYAGKHAYA -> price=5000;
+		case METALLO : price = 4000;
+		break;
+		case MYAGKHAYA : price=5000;
+		break;
 		}
 		return price;
 	}

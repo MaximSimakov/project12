@@ -33,8 +33,10 @@ public class PeregorodkaManagerImpl extends PeregorodkaManager {
 	double getPriceByType(PeregorodkaTypes type) {
 		int price=-1;
 		switch (type){
-		case DA -> price = 10000; 
-		case NET -> price=0;
+		case DA : price = 10000; 
+		break;
+		case NET : price=0;
+		break;
 		}
 		return price;
 	}

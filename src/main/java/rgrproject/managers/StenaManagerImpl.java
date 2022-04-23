@@ -36,9 +36,12 @@ public class StenaManagerImpl extends StenaManager {
 	double getPriceByType(StenaType type) {
 		int price=-1;
 		switch (type){
-		case KIRPICH_1 -> price = 4000; 
-		case KIRPICH_1_5 -> price= 4500;
-		case KIRPICH_2 -> price= 5600;
+		case KIRPICH_1 : price = 4000;
+		break;
+		case KIRPICH_1_5 : price= 4500;
+		break;
+		case KIRPICH_2 : price= 5600;
+		break;
 		}
 		return price;
 	}
