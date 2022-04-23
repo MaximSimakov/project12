@@ -13,7 +13,7 @@
 <b><br><label for="inform1">Введите данные:</label></b>
 
 <br><br><label for="width">Ширина (в метрах):</label>
-<input type="text" name="width" id="width" value="">
+<input type="text" name="width" id="width" value="${width}">
 
 <br><br><label for="length">Длина (в метрах):</label>
 <input type="text" name="length" id="length" value="">
@@ -73,7 +73,7 @@
 <br><br><input type="submit" name="sign1" value="Вывести список подгруппы ">
 <br><br><input type="submit" name="sign2" value="Рассчитать ">
 <br><br><label for="summ">Цена:</label>
-<label for="summ1"></label>${result1}
+<label for="summ1"></label>
 <label for="ryb">руб.</label>
 
  </form>
