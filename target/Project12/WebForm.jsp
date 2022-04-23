@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>Калькулятор - стоимость постройки дома</h1>
-<form action="${pageContext.request.contextPath}/Calc" method="post">
+<form action="${pageContext.request.contextPath}/main" method="post">
 
 <b><br><label for="inform1">Введите данные:</label></b>
 

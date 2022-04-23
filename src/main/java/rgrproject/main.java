@@ -28,6 +28,7 @@ public class main extends HttpServlet{
 		Calc.setAsRequestAttributesAndCalculate(request);
 		
 		request.getRequestDispatcher("/WebForm.jsp").forward(request, response);
+		
 	}
 	
 	private static class RequestCalc {
@@ -58,6 +59,13 @@ public class main extends HttpServlet{
 		}
 		
 		public void setAsRequestAttributesAndCalculate(HttpServletRequest request) {
+			String stena=request.getParameter("stena");
+			String otdelka=request.getParameter("otdelka");
+			String fundam=request.getParameter("fundam");
+			String vnutr=request.getParameter("vnutr");
+			String krsha=request.getParameter("krsha");
+			String oknaDveri=request.getParameter("oknaDveri");
+			
 			CalculatorStateImpl data=new CalculatorStateImpl();
 			request.setAttribute("widht", widht_calc);
 			request.setAttribute("lenght", length_calc);
@@ -87,6 +95,23 @@ public class main extends HttpServlet{
 				dlinaDoma_try = 0;
 				perimetr_try = 0;
 			}
+			
+			if(stena=="kirp") {data.setStenaType(StenaType.KIRPICH_1);}
+			if(stena=="kirp15") {data.setStenaType(StenaType.KIRPICH_1_5);}
+			if(stena=="kirp2") {data.setStenaType(StenaType.KIRPICH_2);}
+			if(otdelka=="oblic") {data.setOttdelcaTypes(OttdelcaTypes.OBLIC_KIRP);}
+			if(otdelka=="shtuk") {data.setOttdelcaTypes(OttdelcaTypes.SHTUCATURKA);}
+			if(otdelka=="kamen") {data.setOttdelcaTypes(OttdelcaTypes.DIKI_KAMEN);}
+			if(fundam=="buronabiv") {data.setFundamentTypes(FundamentTypes.BYRONABIV);}
+			if(fundam=="lent") {data.setFundamentTypes(FundamentTypes.LENTOCHN);}
+			if(fundam=="plit") {data.setFundamentTypes(FundamentTypes.PLITN);}
+			if(vnutr=="yes") {data.setPeregorodkaTypes(PeregorodkaTypes.DA);}
+			if(vnutr=="no") {data.setPeregorodkaTypes(PeregorodkaTypes.NET);}
+			if(krsha=="metall") {data.setKrshaTypes(KrshaTypes.METALLO);}
+			if(krsha=="krovl") {data.setKrshaTypes(KrshaTypes.MYAGKHAYA);}
+			if(oknaDveri=="da") {data.setOknaTypes(OknaTypes.DA);}
+			if(oknaDveri=="net") {data.setOknaTypes(OknaTypes.NET);}
+			
 			data.setWeight(widht_try);
 			data.setHeight(lenght_try);
 			data.setAtazhnost(atazh_try);
@@ -94,8 +119,10 @@ public class main extends HttpServlet{
 			data.setHeight(dlinaDoma_try);
 			data.setHeightKon(perimetr_try);
 			
+			
+			
 			CalculatorManagerImpl result = new CalculatorManagerImpl(data);
-			request.setAttribute("summ",result.getResultPrice());
+			request.setAttribute("summ1",result.getResultPrice());
 			
 		}
 	}
