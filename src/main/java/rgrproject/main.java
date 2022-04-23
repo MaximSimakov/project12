@@ -122,7 +122,7 @@ public class main extends HttpServlet{
 			
 			
 			CalculatorManagerImpl result = new CalculatorManagerImpl(data);
-			request.setAttribute("summ1",result.getResultPrice());
+			request.setAttribute("summ1",stena);
 			
 		}
 	}
