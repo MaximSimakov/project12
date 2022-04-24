@@ -24,107 +24,50 @@ public class main extends HttpServlet{
 	
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
-		Calc.setAsRequestAttributesAndCalculate(request);
 		
-		request.getRequestDispatcher("/WebForm.jsp").forward(request, response);
+		CalculatorStateImpl data=new CalculatorStateImpl();
 		
+		double widht=Double.parseDouble(request.getParameter("width"));
+		double length=Double.parseDouble(request.getParameter("length"));
+		int atazh=Integer.parseInt(request.getParameter("atazh"));
+		double tsokol=Double.parseDouble(request.getParameter("tsokol"));
+		double dlinaDoma=Double.parseDouble(request.getParameter("dlinaDoma"));
+		double perimetr=Double.parseDouble(request.getParameter("perimetr"));
+		
+		String stena=request.getParameter("stena");
+		String otdelka=request.getParameter("otdelka");
+		String fundam=request.getParameter("fundam");
+		String vnutr=request.getParameter("vnutr");
+		String krsha=request.getParameter("krsha");
+		String oknaDveri=request.getParameter("oknaDveri");
+		
+		if(stena.contains("kirp1")==true) data.setStenaType(StenaType.KIRPICH_1);
+		if(stena.contains("kirp15")==true) data.setStenaType(StenaType.KIRPICH_1_5);
+		if(stena.contains("kirp2")==true) data.setStenaType(StenaType.KIRPICH_2);
+		if(otdelka.contains("oblic")==true) data.setOttdelcaTypes(OttdelcaTypes.OBLIC_KIRP);
+		if(otdelka.contains("shtuk")==true) data.setOttdelcaTypes(OttdelcaTypes.SHTUCATURKA);
+		if(otdelka.contains("kamen")==true) data.setOttdelcaTypes(OttdelcaTypes.DIKI_KAMEN);
+		if(fundam.contains("buronabiv")==true) data.setFundamentTypes(FundamentTypes.BYRONABIV);
+		if(fundam.contains("lent")==true) data.setFundamentTypes(FundamentTypes.LENTOCHN);
+		if(fundam.contains("plit")==true) data.setFundamentTypes(FundamentTypes.PLITN);
+		if(vnutr.contains("yes")==true) data.setPeregorodkaTypes(PeregorodkaTypes.DA);
+		if(vnutr.contains("no")==true) data.setPeregorodkaTypes(PeregorodkaTypes.NET);
+		if(krsha.contains("metall")==true) data.setKrshaTypes(KrshaTypes.METALLO);
+		if(krsha.contains("krovl")==true) data.setKrshaTypes(KrshaTypes.MYAGKHAYA);
+		if(oknaDveri.contains("da")==true) data.setOknaTypes(OknaTypes.DA);
+		if(oknaDveri.contains("net")==true) data.setOknaTypes(OknaTypes.NET);
+		
+		data.setWeight(widht);
+		data.setHeight(length);
+		data.setAtazhnost(atazh);
+		data.setTsokol(tsokol);
+		data.setHeightAtazh(dlinaDoma);
+		data.setHeightKon(perimetr);
+	
+		CalculatorManagerImpl res=new CalculatorManagerImpl(data);
+		request.setAttribute("result", res.getResultPrice());
+		request.getRequestDispatcher("WebForm.jsp").forward(request, response);
+	
+	}
 	}
 	
-	private static class RequestCalc {
-		private final String widht_calc;
-		private final String length_calc;
-		private final String atazh_calc;
-		private final String tsokol_calc;
-		private final String dlinaDoma_calc;
-		private final String perimetr_calc;
-		
-		
-		private RequestCalc(String widht,String length, String atazh, String tsokol ,String dlinaDoma,String perimetr) {
-		this.widht_calc = widht;
-		this.length_calc = length;
-		this.atazh_calc = atazh;
-		this.tsokol_calc = tsokol;
-		this.dlinaDoma_calc = dlinaDoma;
-		this.perimetr_calc = perimetr;
-	}
-		public static RequestCalc fromRequestParameters(HttpServletRequest request) {
-			return new RequestCalc(
-			request.getParameter("widht"),
-			request.getParameter("lenght"),
-			request.getParameter("atazh"),
-			request.getParameter("tsokol"),
-			request.getParameter("dlinaDoma"),
-			request.getParameter("perimetr"));
-		}
-		
-		public void setAsRequestAttributesAndCalculate(HttpServletRequest request) {
-			String stena=request.getParameter("stena");
-			String otdelka=request.getParameter("otdelka");
-			String fundam=request.getParameter("fundam");
-			String vnutr=request.getParameter("vnutr");
-			String krsha=request.getParameter("krsha");
-			String oknaDveri=request.getParameter("oknaDveri");
-			
-			CalculatorStateImpl data=new CalculatorStateImpl();
-			request.setAttribute("widht", widht_calc);
-			request.setAttribute("lenght", length_calc);
-			request.setAttribute("atazh", atazh_calc);
-			request.setAttribute("tsokol", tsokol_calc);
-			request.setAttribute("dlinaDoma", dlinaDoma_calc);
-			request.setAttribute("perimetr", perimetr_calc);
-			int widht_try;
-			int lenght_try;
-			int atazh_try;
-			int tsokol_try;
-			int dlinaDoma_try;
-			int perimetr_try;
-			try {
-				widht_try = Integer.parseInt(widht_calc);
-				lenght_try = Integer.parseInt(length_calc);
-				atazh_try = Integer.parseInt(atazh_calc);
-				tsokol_try = Integer.parseInt(tsokol_calc);
-				dlinaDoma_try = Integer.parseInt(dlinaDoma_calc);
-				perimetr_try = Integer.parseInt(perimetr_calc);
-			}
-			catch(NumberFormatException e) {
-				widht_try = 0;
-				lenght_try = 0;
-				atazh_try = 0;
-				tsokol_try = 0;
-				dlinaDoma_try = 0;
-				perimetr_try = 0;
-			}
-			
-			if(stena=="kirp") {data.setStenaType(StenaType.KIRPICH_1);}
-			if(stena=="kirp15") {data.setStenaType(StenaType.KIRPICH_1_5);}
-			if(stena=="kirp2") {data.setStenaType(StenaType.KIRPICH_2);}
-			if(otdelka=="oblic") {data.setOttdelcaTypes(OttdelcaTypes.OBLIC_KIRP);}
-			if(otdelka=="shtuk") {data.setOttdelcaTypes(OttdelcaTypes.SHTUCATURKA);}
-			if(otdelka=="kamen") {data.setOttdelcaTypes(OttdelcaTypes.DIKI_KAMEN);}
-			if(fundam=="buronabiv") {data.setFundamentTypes(FundamentTypes.BYRONABIV);}
-			if(fundam=="lent") {data.setFundamentTypes(FundamentTypes.LENTOCHN);}
-			if(fundam=="plit") {data.setFundamentTypes(FundamentTypes.PLITN);}
-			if(vnutr=="yes") {data.setPeregorodkaTypes(PeregorodkaTypes.DA);}
-			if(vnutr=="no") {data.setPeregorodkaTypes(PeregorodkaTypes.NET);}
-			if(krsha=="metall") {data.setKrshaTypes(KrshaTypes.METALLO);}
-			if(krsha=="krovl") {data.setKrshaTypes(KrshaTypes.MYAGKHAYA);}
-			if(oknaDveri=="da") {data.setOknaTypes(OknaTypes.DA);}
-			if(oknaDveri=="net") {data.setOknaTypes(OknaTypes.NET);}
-			
-			data.setWeight(widht_try);
-			data.setHeight(lenght_try);
-			data.setAtazhnost(atazh_try);
-			data.setTsokol(tsokol_try);
-			data.setHeight(dlinaDoma_try);
-			data.setHeightKon(perimetr_try);
-			
-			
-			
-			CalculatorManagerImpl result = new CalculatorManagerImpl(data);
-			request.setAttribute("summ1",result.getResultPrice());
-			
-		}
-	}
-	
-}
