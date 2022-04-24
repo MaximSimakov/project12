@@ -42,9 +42,12 @@ public class OttdelcaManagerImpl extends OttdelcaManager {
 	double getPriceByType(OttdelcaTypes type) {
 		int price=-1;
 		switch (type){
-		case SHTUCATURKA -> price = 880; 
-		case OBLIC_KIRP -> price= 1000;
-		case DIKI_KAMEN -> price= 1100;
+		case SHTUCATURKA : price = 880; 
+		break;
+		case OBLIC_KIRP : price= 1000;
+		break;
+		case DIKI_KAMEN : price= 1100;
+		break;
 		}
 		return price;
 	}

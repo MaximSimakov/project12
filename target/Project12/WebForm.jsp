@@ -13,7 +13,7 @@
 <b><br><label for="inform1">Введите данные:</label></b>
 
 <br><br><label for="width">Ширина (в метрах):</label>
-<input type="text" name="width" id="width" value="${width}">
+<input type="text" name="width" id="width" value="">
 
 <br><br><label for="length">Длина (в метрах):</label>
 <input type="text" name="length" id="length" value="">
