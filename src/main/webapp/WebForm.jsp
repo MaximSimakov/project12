@@ -10,6 +10,10 @@
 <h1>Калькулятор - стоимость постройки дома</h1>
 <form action="${pageContext.request.contextPath}/main" method="post">
 
+<p><span id="error">${error}</span></p>
+
+<p><span id="error2">${error2}</span></p>
+
 <b><br><label for="inform1">Введите данные:</label></b>
 
 <br><br><label for="width">Ширина (в метрах):</label>
