@@ -27,12 +27,21 @@ public class main extends HttpServlet{
 		
 		CalculatorStateImpl data=new CalculatorStateImpl();
 		
+		try {
+		
 		double widht=Double.parseDouble(request.getParameter("width"));
+		if(widht<=0) throw new Exception();
 		double length=Double.parseDouble(request.getParameter("length"));
+		if(length<=0) throw new Exception();
 		int atazh=Integer.parseInt(request.getParameter("atazh"));
+		if(atazh>3) throw new Exception(" оличество этажей не может быть больше 3");
+		if(atazh<=0) throw new Exception();
 		double tsokol=Double.parseDouble(request.getParameter("tsokol"));
+		if(tsokol<=0) throw new Exception();
 		double dlinaDoma=Double.parseDouble(request.getParameter("dlinaDoma"));
+		if(dlinaDoma<=0) throw new Exception();
 		double perimetr=Double.parseDouble(request.getParameter("perimetr"));
+		if(perimetr<=0) throw new Exception();
 		
 		String stena=request.getParameter("stena");
 		String otdelka=request.getParameter("otdelka");
@@ -67,7 +76,11 @@ public class main extends HttpServlet{
 		CalculatorManagerImpl res=new CalculatorManagerImpl(data);
 		request.setAttribute("result", res.getResultPrice());
 		request.getRequestDispatcher("WebForm.jsp").forward(request, response);
-	
+		}
+		
+		catch (Exception i) {
+			
+		}
 	}
 	}
 	
