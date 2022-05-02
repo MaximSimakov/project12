@@ -3,8 +3,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
     <title>Login</title>
+<style>
+body{
 
+background: #c7b39b;
+color: #fff;
+}
+</style>
 </head>
 <body>
 
@@ -19,5 +26,6 @@
 
         </form>
     </div>
+    
 </body>
 </html>
