@@ -5,6 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Калькулятор - стоимость постройки дома</title>
+<style>
+body{
+
+background: #c7b39b;
+color: #654321;
+}
+</style>
+
 </head>
 <body>
 <h1>Калькулятор - стоимость постройки дома</h1>

@@ -9,7 +9,7 @@
 body{
 
 background: #c7b39b;
-color: #fff;
+color: #654321;
 }
 </style>
 </head>
