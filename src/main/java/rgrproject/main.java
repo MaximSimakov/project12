@@ -76,6 +76,7 @@ public class main extends HttpServlet{
 		CalculatorManagerImpl res=new CalculatorManagerImpl(data);
 		request.setAttribute("result", res.getResultPrice());
 		request.getRequestDispatcher("WebForm.jsp").forward(request, response);
+		new PDFCreate(res,data);
 		}
 		
 		catch (Exception i) {
