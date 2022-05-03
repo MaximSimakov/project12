@@ -8,7 +8,7 @@
 <style>
 body{
 
-background: #c7b39b;
+background: #c7b39b url(adm.jpg);
 color: #654321;
 }
 </style>
