@@ -8,9 +8,11 @@
 <style>
 body{
 
-background: #c7b39b url(adm.jpg);
-color: #654321;
+background: #c7b39b url(avt.jpg);
+color: #FFFFFF;
+text-align: center;
 }
+
 </style>
 </head>
 <body>
@@ -25,7 +27,8 @@ color: #654321;
             <input class="button" type="submit" value="Войти">
 
         </form>
+        
     </div>
-    
+   
 </body>
 </html>
