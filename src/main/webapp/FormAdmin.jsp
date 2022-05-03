@@ -80,7 +80,7 @@ color: #FFFFFF;
   <option value="net">Нет</option>
 </select>
 
-<br><br><input type="submit" name="logout" value="Назад">
+<br><br><input type="submit" name="/logout" value="Назад">
 <br><br><input type="submit" name="sign3" value="Поменять фон">
 <br><br><input type="submit" name="sign2" value="Рассчитать ">
 <p>Цена:<span id="result" style="background:#654321">${result}</span>руб</p>
