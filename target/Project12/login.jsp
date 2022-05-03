@@ -9,7 +9,7 @@
 body{
 
 background: #c7b39b url(avt.jpg);
-color: #FFFFF;
+color: #FFFFFF;
 text-align: center;
 }
 
