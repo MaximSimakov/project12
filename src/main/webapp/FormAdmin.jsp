@@ -82,6 +82,7 @@ color: #FFFFFF;
 
 <br><br><input type="submit" name="sign3" value="Поменять фон">
 <br><br><input type="submit" name="sign2" value="Рассчитать ">
+<br><br><input type="submit" name="sign5" value="Вывести список группы">
 <p>Цена:<span id="result" style="background:#654321">${result}</span>руб</p>
 
  </form>
