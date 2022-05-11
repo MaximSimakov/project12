@@ -1,5 +1,6 @@
 /home/simakov/git/project12/src/main/java/rgrproject/managers/CalculatorState.java
 /home/simakov/git/project12/src/main/java/rgrproject/types/FundamentTypes.java
+/home/simakov/git/project12/src/main/java/rgrproject/CreatePDF.java
 /home/simakov/git/project12/src/main/java/ru/servlets/ContextListener.java
 /home/simakov/git/project12/src/main/java/rgrproject/managers/FundamentManagerImpl.java
 /home/simakov/git/project12/src/main/java/rgrproject/managers/OttdelcaManager.java
@@ -12,6 +13,7 @@
 /home/simakov/git/project12/src/main/java/rgrproject/main.java
 /home/simakov/git/project12/src/main/java/ru/model/User.java
 /home/simakov/git/project12/src/main/java/rgrproject/types/OknaTypes.java
+/home/simakov/git/project12/src/main/java/ru/servlets/OutputList.java
 /home/simakov/git/project12/src/main/java/rgrproject/managers/BaseManager.java
 /home/simakov/git/project12/src/main/java/rgrproject/managers/StenaManager.java
 /home/simakov/git/project12/src/main/java/rgrproject/managers/OttdelcaManagerImpl.java

@@ -11,7 +11,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
-import create.CreatePDF;
+import rgrproject.CreatePDF;
 
 public class PDFCreate {
 	
@@ -35,18 +35,12 @@ public class PDFCreate {
      *
      * @param result with calculation results
      * @param with the received data
+	 * @throws IOException 
      */
      
-     public PDFCreate(CalculatorManagerImpl result, CalculatorStateImpl data) {
+     public PDFCreate(CalculatorManagerImpl result, CalculatorStateImpl data) throws IOException {
     	 this.document = new Document();
-			Namefile = "Project12.pdf";
-			try {
-				PdfWriter.getInstance(document, new FileOutputStream(this.Namefile)); 
-			} catch (FileNotFoundException | DocumentException e) { 
-				e.printStackTrace();
-			}
-			
-			document.open();
+		
  
 			String Heading = "                                    Курсовая работа вариант 12";
 			String startText="Тема:Калькулятор расчета стоимости строительства частного дома";
@@ -94,7 +88,7 @@ public class PDFCreate {
 			
 			
 			
-			CreatePDF pdf = new CreatePDF(Namefile,times);
+			CreatePDF pdf = new CreatePDF("Project12.pdf",times);
 			Document document = pdf.getDocument();
 			pdf.addText(document, Heading, 20,true);
 			pdf.addPicture(Imagelink, document, 360, 730);

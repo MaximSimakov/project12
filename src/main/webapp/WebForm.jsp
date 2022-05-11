@@ -81,8 +81,8 @@ color: #FFFFFF;
   <option value="da">Да</option>
   <option value="net">Нет</option>
 </select>
-
 <br><br><input type="submit" name="sign2" value="Рассчитать ">
+<a href="/Project12/Project12.pdf"=download>PDF-файл</a>
 <br><br><input type="submit" name="sign5" value="Вывести список группы">
 <p>Цена:<span id="result" style="background:#654321">${result}</span>руб</p>
 
