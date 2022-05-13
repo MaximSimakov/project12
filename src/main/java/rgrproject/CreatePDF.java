@@ -43,7 +43,6 @@ public class CreatePDF {
 				abspath=abspath+parsfilepath[i]+"/";
 			}
 			filepath=abspath+"webapps/Project12/"+Namefile;
-			
 			try {
 				PdfWriter.getInstance(document, new FileOutputStream(filepath));
 			} 
