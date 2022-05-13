@@ -91,8 +91,6 @@ color: #FFFFFF;
   <option value="da">Да</option>
   <option value="net">Нет</option>
 </select>
-
-<br><br><input type="submit" name="sign3" value="Поменять фон">
 <br><br><input type="submit" name="sign2" value="Рассчитать ">
 <br><br><input type="submit" value="Вывести список группы" onclick="isGroup()">
 <br><br><input type="submit" value="Поменять фон" onclick="isBack()">
