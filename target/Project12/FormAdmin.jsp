@@ -14,6 +14,12 @@ color: #FFFFFF;
 </style>
 
 
+<script type="text/javascript">
+    function isGroup(){
+      alert("Список : 1. Симаков Максим 2. Асьянов Арслан 3. Рогова Анастасия 4. Шайхутдинов Тимур");
+    }
+</script>
+
 </head>
 <body>
 <h1 style="background:#654321">Калькулятор - стоимость постройки дома</h1>
@@ -82,7 +88,7 @@ color: #FFFFFF;
 
 <br><br><input type="submit" name="sign3" value="Поменять фон">
 <br><br><input type="submit" name="sign2" value="Рассчитать ">
-<br><br><input type="submit" name="sign5" value="Вывести  список группы">
+<br><br><input type="submit" value="Вывести список группы" onclick="isGroup()">
 <p>Цена:<span id="result" style="background:#654321">${result}</span>руб</p>
 <p>Список группы : <span id="result" style="background:#654321">${ollist}</span></p>
  </form>
