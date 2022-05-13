@@ -20,9 +20,9 @@ color: #FFFFFF;
     }
 
     function isBack(){
-      document.body.style.background = '#c7b39b url(avt.jpg)';
 
-      alert("фон был изменен");
+      return document.body.style.background = '#c7b39b url(avt.jpg)';
+
     }
 </script>
 
