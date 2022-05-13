@@ -17,6 +17,7 @@
 <source>1.8</source>
 <target>1.8</target>
 <encoding>Cp1252</encoding>
+<encoding>ISO-8859-1</encoding>
 </configuration>
 </plugin>
 
