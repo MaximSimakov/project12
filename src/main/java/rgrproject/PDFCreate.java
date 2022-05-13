@@ -1,6 +1,6 @@
 package rgrproject;
 
-import com.itextpdf.*;
+
 import com.itextpdf.text.*;
 import rgrproject.managers.*;
 import com.itextpdf.text.DocumentException;
