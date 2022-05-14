@@ -90,7 +90,7 @@ public class PDFCreate {
 			
 			
 			
-			CreatePDF pdf = new CreatePDF("Project12.pdf",times);
+			CreatePDF pdf = new CreatePDF("Project12.pdf");
 			Document document = pdf.getDocument();
 			pdf.addText(document, Heading, 20,true);
 			pdf.addPicture(Imagelink, document, 360, 730);

@@ -30,9 +30,10 @@ public class CreatePDF {
 	private PdfPTable table;
 
 	
-		public CreatePDF(String Namefile, BaseFont BaseFontPDF) throws IOException { 
+		public CreatePDF(String Namefile) throws IOException { 
 			this.Namefile=Namefile;
-			this.times=BaseFontPDF;		
+			//BaseFont BaseFontPDF;
+			//this.times=BaseFontPDF;		
 			
 			this.document = new Document(); 
 			String filepath=new File("").getCanonicalPath();
