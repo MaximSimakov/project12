@@ -44,7 +44,7 @@ public class CreatePDF {
 				abspath=abspath+parsfilepath[i]+"/";
 			}
 			filepath=abspath+"webapps/Project_12/"+Namefile;
-			String fontpath=abspath+"webapps/Project_12/WEB-INF/classes/fonts/times.ttf";
+			String fontpath=abspath+"webapps/Project_12/fonts/times.ttf";
 			try {
 				PdfWriter.getInstance(document, new FileOutputStream(filepath));
 			} 
