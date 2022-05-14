@@ -48,13 +48,13 @@ public class PDFCreate {
 			String FinalText="К оплате: "+result.getResultPrice(); 
 			BaseFont times = null;
 			URL Imagelink=getClass().getResource("/pictures/UGATU.jpg");
-			try {
-				times = BaseFont.createFont("/webapps/Project_12/WEB-INF/classes/fonts/times.ttf", "cp1251", BaseFont.EMBEDDED);
-			} catch (DocumentException e2) {
-				e2.printStackTrace();
-			} catch (IOException e2) {
-				e2.printStackTrace();
-			}
+			//try {
+				//times = BaseFont.createFont("/webapps/Project_12/WEB-INF/classes/fonts/times.ttf", "cp1251", BaseFont.EMBEDDED);
+			//} catch (DocumentException e2) {
+				//e2.printStackTrace();
+			//} catch (IOException e2) {
+				//e2.printStackTrace();
+			//}
 			
 			
 			

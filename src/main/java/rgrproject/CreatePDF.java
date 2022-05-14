@@ -43,6 +43,7 @@ public class CreatePDF {
 				abspath=abspath+parsfilepath[i]+"/";
 			}
 			filepath=abspath+"webapps/Project_12/"+Namefile;
+			String fontpath=abspath+"webapps/Project_12/WEB-INF/classes/fonts/times.ttf";
 			try {
 				PdfWriter.getInstance(document, new FileOutputStream(filepath));
 			} 
@@ -51,6 +52,15 @@ public class CreatePDF {
 			}
 			
 			document.open(); 
+			
+			try {
+				times=BaseFont.createFont(fontpath,"cp1251",BaseFont.EMBEDDED);
+			}catch (DocumentException e2) {
+				e2.printStackTrace();
+			} catch (IOException e2) {
+				e2.printStackTrace();
+			}
+			
 		}
 
 	
