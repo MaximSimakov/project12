@@ -52,6 +52,8 @@ public class PDFCreate {
 				times = BaseFont.createFont("/fonts/time.ttf", "cp1251", BaseFont.EMBEDDED);
 			} catch (DocumentException e2) {
 				e2.printStackTrace();
+			} catch (IOException e2) {
+				e2.printStackTrace();
 			}
 			
 			
