@@ -95,7 +95,7 @@ color: #FFFFFF;
 <br><br><input type="submit" value="Вывести список группы" onclick="isGroup()">
 <br><br><input type="submit" value="Поменять фон" onclick="isBack()">
 <p>Цена:<span id="result" style="background:#654321">${result}</span>руб</p>
-<p>Список группы : <span id="result" style="background:#654321">${ollist}</span></p>
  </form>
+ <br><br><input type="submit" value="Поменять фон" onclick="isBack()">
 </body>
 </html>
