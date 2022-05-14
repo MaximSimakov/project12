@@ -18,6 +18,12 @@ color: #FFFFFF;
     function isGroup(){
       alert("Список : 1. Симаков Максим 2. Асьянов Арслан 3. Рогова Анастасия 4. Шайхутдинов Тимур");
     }
+
+    function isBack(){
+
+      return document.body.style.background = '#c7b39b url(avt.jpg)';
+
+    }
 </script>
 
 </head>
@@ -85,12 +91,10 @@ color: #FFFFFF;
   <option value="da">Да</option>
   <option value="net">Нет</option>
 </select>
-
-<br><br><input type="submit" name="sign3" value="Поменять фон">
 <br><br><input type="submit" name="sign2" value="Рассчитать ">
 <br><br><input type="submit" value="Вывести список группы" onclick="isGroup()">
 <p>Цена:<span id="result" style="background:#654321">${result}</span>руб</p>
-<p>Список группы : <span id="result" style="background:#654321">${ollist}</span></p>
  </form>
+ <br><input type="submit" value="Поменять фон" onclick="isBack()">
 </body>
 </html>

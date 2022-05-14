@@ -59,7 +59,7 @@ public class PDFCreate {
 			Hat[0]="Наименование элемента";
 			Hat[1]="Цена";
 			
-			Cells[0][0]="Ширина: ";
+			Cells[0][0]="Ширина";
 			Cells[0][1]=""+data.getWeight();
 			Cells[0][2]="Длина";
 			Cells[0][3]=""+data.getHeight();
