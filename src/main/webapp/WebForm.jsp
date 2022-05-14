@@ -91,7 +91,7 @@ color: #FFFFFF;
 <a href="/Project_12/Project12.pdf"=download>PDF-файл</a>
 <br><br><input type="submit" value="Вывести список группы" onclick="isGroup()">
 <p>Цена:<span id="result" style="background:#654321">${result}</span>руб</p>
-
+<br>
  </form>
 </body>
 </html>
