@@ -88,7 +88,7 @@ color: #FFFFFF;
   <option value="net">Нет</option>
 </select>
 <br><br><input type="submit" name="sign2" value="Рассчитать ">
-<a href="/Project_12/WEB-INF/classes/fonts/times.ttf"=download>PDF-файл</a>
+<a href="/Project_12/Project12.pdf"=download>PDF-файл</a>
 <br><br><input type="submit" value="Вывести список группы" onclick="isGroup()">
 <p>Цена:<span id="result" style="background:#654321">${result}</span>руб</p>
 

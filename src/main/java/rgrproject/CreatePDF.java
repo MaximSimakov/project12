@@ -46,7 +46,7 @@ public class CreatePDF {
 			filepath=abspath+"webapps/Project_12/"+Namefile;
 			String fontpath=abspath+"webapps/Project_12/WEB-INF/classes/fonts/times.ttf";
 			try {
-				PdfWriter.getInstance(document, new FileOutputStream(fontpath));
+				PdfWriter.getInstance(document, new FileOutputStream(filepath));
 			} 
 			catch(FileNotFoundException | DocumentException e ) {
 				e.printStackTrace();
