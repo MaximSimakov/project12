@@ -81,7 +81,6 @@ public class main extends HttpServlet{
 		
 		catch (Exception i) {
 			request.setAttribute("error", "Неверно введены параметры");
-			request.setAttribute("error2", i.getMessage());
 			request.getRequestDispatcher("WebForm.jsp").forward(request, response);
 		}
 	}
