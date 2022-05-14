@@ -93,7 +93,6 @@ color: #FFFFFF;
 </select>
 <br><br><input type="submit" name="sign2" value="Рассчитать ">
 <br><br><input type="submit" value="Вывести список группы" onclick="isGroup()">
-<br><br><input type="submit" value="Поменять фон" onclick="isBack()">
 <p>Цена:<span id="result" style="background:#654321">${result}</span>руб</p>
  </form>
  <br><br><input type="submit" value="Поменять фон" onclick="isBack()">
