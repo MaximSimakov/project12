@@ -61,7 +61,7 @@ public class PDFCreate {
 			
 			Cells[0][0]="Ширинa";
 			Cells[0][1]=""+data.getWeight();
-			Cells[0][2]="Длина";
+			Cells[0][2]="Длинa";
 			Cells[0][3]=""+data.getHeight();
 			Cells[0][4]="Этажность";
 			Cells[0][5]=""+data.getAtazhnost();;
