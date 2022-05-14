@@ -49,12 +49,14 @@ public class PDFCreate {
 			BaseFont times = null;
 			URL Imagelink=getClass().getResource("/pictures/UGATU.jpg");
 			try {
-				times = BaseFont.createFont("/fonts/times.ttf", "cp1251", BaseFont.EMBEDDED);
+				times = BaseFont.createFont("/fonts/times.ttf", "Cp1251", BaseFont.EMBEDDED);
 			} catch (DocumentException e2) {
 				e2.printStackTrace();
 			} catch (IOException e2) {
 				e2.printStackTrace();
 			}
+			
+			
 			
 			Hat[0]="Наименование элемента";
 			Hat[1]="Цена";
