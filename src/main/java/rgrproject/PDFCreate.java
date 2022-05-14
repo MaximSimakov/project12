@@ -42,10 +42,10 @@ public class PDFCreate {
     	 this.document = new Document();
 		
  
-			String Heading = "                                    Курсовая работа вариант 12";
-			String startText="Тема:Калькулятор расчета стоимости строительства частного дома";
+			String Heading = "                                    Project12";
+			String startText="";
 
-			String FinalText="К оплате: "+result.getResultPrice(); 
+			String FinalText="Summ: "+result.getResultPrice(); 
 			BaseFont times = null;
 			URL Imagelink=getClass().getResource("/pictures/UGATU.jpg");
 			//try {
@@ -58,37 +58,37 @@ public class PDFCreate {
 			
 			
 			
-			Hat[0]="Наименование элемента";
-			Hat[1]="Цена";
+			Hat[0]="Element";
+			Hat[1]="Price";
 			
-			Cells[0][0]="Ширинa";
+			Cells[0][0]="Width";
 			Cells[0][1]=""+data.getWeight();
-			Cells[0][2]="Длинa";
+			Cells[0][2]="Height";
 			Cells[0][3]=""+data.getHeight();
-			Cells[0][4]="Этажность";
+			Cells[0][4]="Floors:";
 			Cells[0][5]=""+data.getAtazhnost();;
-			Cells[0][6]="Высота цоколя: ";
+			Cells[0][6]="Plinth height: ";
 			Cells[0][7]=""+data.getTsokol();
-			Cells[0][8]="Длина всего домая: ";
+			Cells[0][8]="House length: ";
 			Cells[0][9]=""+data.getHeightAtazh();
-			Cells[0][10]="Периметр крыши: ";
+			Cells[0][10]="Roof perimetr: ";
 			Cells[0][11]=""+data.getHeightKon();
-			Cells[0][12]="Стена: ";
+			Cells[0][12]="Wall: ";
 			Cells[0][13]=""+result.getNs();
-			Cells[0][14]="Отделка наружная: ";
+			Cells[0][14]="Exterior: ";
 			Cells[0][15]=""+result.getOt();
-			Cells[0][16]="Фундамент: ";
+			Cells[0][16]="Fundament: ";
 			Cells[0][17]=""+result.getFn();
-			Cells[0][18]="Внутренние перегородки: ";
+			Cells[0][18]="Interior: ";
 			Cells[0][19]=""+result.getPer();
-			Cells[0][20]="Крыша: ";
+			Cells[0][20]="Roof: ";
 			Cells[0][21]=""+result.getKr();
-			Cells[0][22]="Окна+мет.двери:";
+			Cells[0][22]="Windows+doors:";
 			Cells[0][23]=""+result.getOk();
-			Cells[0][24]="Итого: ";
+			Cells[0][24]="Summ: ";
 			Cells[0][25]=""+result.getResultPrice();
 			
-
+			
 			
 			CreatePDF pdf = new CreatePDF("Project12.pdf");
 			Document document = pdf.getDocument();
@@ -99,7 +99,6 @@ public class PDFCreate {
 			pdf.addRowsInTable(pdf.getTable(), Cells);
 			pdf.addTable(document,pdf.getTable());
 			pdf.addText(document, FinalText, 18, true);
-			pdf.addText(document, "Ы", 14, true);
 			pdf.getClose();
 		
 	
