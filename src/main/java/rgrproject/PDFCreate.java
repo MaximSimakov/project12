@@ -49,7 +49,7 @@ public class PDFCreate {
 			BaseFont times = null;
 			URL Imagelink=getClass().getResource("/pictures/UGATU.jpg");
 			try {
-				times = BaseFont.createFont("/fonts/times.ttf", "cp1251", BaseFont.EMBEDDED);
+				times = BaseFont.createFont("/fonts/times.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
 			} catch (DocumentException e2) {
 				e2.printStackTrace();
 			} catch (IOException e2) {
