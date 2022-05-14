@@ -88,7 +88,7 @@ public class PDFCreate {
 			Cells[0][24]="Итого: ";
 			Cells[0][25]=""+result.getResultPrice();
 			
-			
+
 			
 			CreatePDF pdf = new CreatePDF("Project12.pdf");
 			Document document = pdf.getDocument();
@@ -99,6 +99,7 @@ public class PDFCreate {
 			pdf.addRowsInTable(pdf.getTable(), Cells);
 			pdf.addTable(document,pdf.getTable());
 			pdf.addText(document, FinalText, 18, true);
+			pdf.addText(document, "Ы", 14, true);
 			pdf.getClose();
 		
 	
