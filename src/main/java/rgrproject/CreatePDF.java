@@ -42,7 +42,7 @@ public class CreatePDF {
 			for (int i=0;(i<lenghtpath-1);i++) {
 				abspath=abspath+parsfilepath[i]+"/";
 			}
-			filepath=abspath+"webapps/Project12/"+Namefile;
+			filepath=abspath+"webapps/Project_12/"+Namefile;
 			try {
 				PdfWriter.getInstance(document, new FileOutputStream(filepath));
 			} 
