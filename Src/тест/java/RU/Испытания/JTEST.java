@@ -25,8 +25,6 @@ data.setStenaType(StenaType.KIRPICH_1);
 data.setOttdelcaTypes(OttdelcaTypes.SHTUCATURKA);
 data.setPeregorodkaTypes(PeregorodkaTypes.DA);
 data.setOknaTypes(OknaTypes.DA);
-
-
 data.setHeightKon(10);
 CalculatorManagerImpl result = new CalculatorManagerImpl(data);
 Assert.assertEquals(40000,result.getKr(),1);
